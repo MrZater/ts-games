@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块</title>
+    <style>
+        #root {
+            display: flex;
+            justify-content: center;
+        }
+
+        #panel {
+            background: #000;
+            position: relative;
+        }
+        #next{
+            position: relative;
+        }
+        #tip{
+            margin-left: 1em;
+        }
+        #score{
+            font-size: 2em;
+            font-weight: bold;
+            color: #f20;
+            padding-left: 20px;
+        }
+        #msg{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(255,255,255,0.3);
+            z-index: 999;
+            /* display: flex; */
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        #msg p{
+            border: 2px solid #fff;
+            padding: 1em;
+            background-color: #f20;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div id="panel">
+            <div id="msg">
+                <p>游戏暂停</p>
+            </div>
+        </div>
+        <div id="tip">
+            <div id="next"></div>
+            <div id="score"></div>
+            <p>
+                使用方向键进行游戏：
+            </p>
+            <p>👆：旋转</p>
+            <p>👈：向左</p>
+            <p>👉：向右</p>
+            <p>👇：下降</p>
+            <p>空格：暂停或开始</p>
+        </div>
+    </div>
+</body>
+
+</html>
